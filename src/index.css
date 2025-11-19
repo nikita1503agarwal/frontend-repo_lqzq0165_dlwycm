@@ -12,6 +12,7 @@
   .neon-border { box-shadow: 0 0 0 1px rgba(229,9,20,0.6) inset, 0 0 20px rgba(229,9,20,0.35), 0 0 40px rgba(229,9,20,0.25); }
   .glass { @apply bg-white/5 backdrop-blur-md border border-white/10; }
   .scanlines { background: repeating-linear-gradient( to bottom, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 2px ); }
-  .vignette { background-image: theme('backgroundImage.vignette'); pointer-events: none; }
-  .grain { background-image: theme('backgroundImage.grain'); pointer-events: none; }
+  /* Use raw CSS gradients to avoid theme() in CSS which PostCSS can't parse here */
+  .vignette { background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%); pointer-events: none; }
+  .grain { background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 3px 3px; pointer-events: none; }
 }
