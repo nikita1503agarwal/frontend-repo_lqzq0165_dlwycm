@@ -1,0 +1,40 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+
+  VITE v5.4.20  ready in 295 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.6.212:3000/
+Error in error handler:
+Error: offset is longer than source length! offset 913 > length 788
+    at numberToPos (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:16981:11)
+    at TransformPluginContext._formatError (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49270:25)
+    at TransformPluginContext.error (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+    at PluginContainer.transform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49103:13)
+    at async loadAndTransform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+
+10:26:56 AM [vite] Pre-transform error: [postcss] Unexpected token, expected "," (29:60)
+Error in error handler:
+Error: offset is longer than source length! offset 913 > length 788
+    at numberToPos (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:16981:11)
+    at TransformPluginContext._formatError (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49270:25)
+    at TransformPluginContext.error (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+    at PluginContainer.transform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49103:13)
+    at async loadAndTransform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+    at async viteTransformMiddleware (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:62105:24)
+
+10:27:18 AM [vite] Internal server error: [postcss] Unexpected token, expected "," (29:60)
+  Plugin: vite:css
+  File: /home/workspace/src/index.css:undefined:NaN
+      at unexpected (/home/workspace/node_modules/sucrase/dist/parser/traverser/util.js:99:15)
+      at expect (/home/workspace/node_modules/sucrase/dist/parser/traverser/util.js:86:5)
+      at parseObj (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:759:20)
+      at parseExprAtom (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:553:7)
+      at parseExprSubscripts (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:276:20)
+      at parseMaybeUnary (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:257:20)
+      at parseExprOps (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:185:20)
+      at parseMaybeConditional (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:157:20)
+      at baseParseMaybeAssign (/home/workspace/node_modules/sucrase/dist/parser/traverser/expression.js:142:20)
+      at tsParseMaybeAssignWithoutJSX (/home/workspace/node_modules/sucrase/dist/parser/plugins/typescript.js:1580:45)

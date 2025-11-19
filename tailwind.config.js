@@ -1,51 +1,53 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        geist: ['Geist', 'system-ui', 'sans-serif'],
-        'geist-mono': ['Geist Mono', 'monospace'],
-        mona: ['Mona Sans', 'system-ui', 'sans-serif'],
-        'ibm-plex': ['IBM Plex Sans', 'system-ui', 'sans-serif'],
-        manrope: ['Manrope', 'system-ui', 'sans-serif'],
+      colors: {
+        night: '#050507',
+        neon: {
+          red: '#e50914',
+          purple: '#5b2bff',
+          blue: '#3056d3'
+        }
       },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'fade-out': 'fadeOut 0.5s ease-in-out',
-        'slide-in': 'slideIn 0.3s ease-out',
-        'slide-up': 'slideUp 0.3s ease-out',
-        'bounce-in': 'bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-        'spin-slow': 'spin 3s linear infinite',
+      fontFamily: {
+        sans: ['Inter', 'Rubik', 'system-ui', 'sans-serif'],
+        mono: ['Source Code Pro', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        title: ['Cinzel', 'EB Garamond', 'serif']
+      },
+      boxShadow: {
+        neon: '0 0 20px rgba(229, 9, 20, 0.6), 0 0 40px rgba(229, 9, 20, 0.3)',
+        purple: '0 0 20px rgba(91,43,255,0.6), 0 0 40px rgba(91,43,255,0.3)',
+        blue: '0 0 20px rgba(48,86,211,0.6), 0 0 40px rgba(48,86,211,0.3)'
+      },
+      backgroundImage: {
+        grain: "url('data:image/svg+xml;utf8,<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><filter id=\\"n\\"><feTurbulence type=\\"fractalNoise\\" baseFrequency=\\".8\\" numOctaves=\\"2\\" stitchTiles=\\"stitch\\"/></filter><rect width=\\"100%\\" height=\\"100%\\" filter=\\"url(%23n)\\" opacity=\\"0.05\\"/></svg>')",
+        vignette: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%)'
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        glow: {
+          '0%, 100%': { textShadow: '0 0 8px rgba(229,9,20,0.6), 0 0 24px rgba(229,9,20,0.4)' },
+          '50%': { textShadow: '0 0 14px rgba(229,9,20,0.9), 0 0 32px rgba(229,9,20,0.7)' }
         },
-        fadeOut: {
-          '0%': { opacity: '1' },
-          '100%': { opacity: '0' },
+        slowPulse: {
+          '0%, 100%': { opacity: 0.85 },
+          '50%': { opacity: 1 }
         },
-        slideIn: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(100%)' },
-          '100%': { transform: 'translateY(0)' },
-        },
-        bounceIn: {
-          '0%': { opacity: '0', transform: 'scale(0.3)' },
-          '50%': { transform: 'scale(1.05)' },
-          '70%': { transform: 'scale(0.9)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
-        },
+        flicker: {
+          '0%, 18%, 22%, 25%, 53%, 57%, 100%': { opacity: 1 },
+          '20%, 24%, 55%': { opacity: 0.4 }
+        }
       },
+      animation: {
+        glow: 'glow 4s ease-in-out infinite',
+        slowPulse: 'slowPulse 6s ease-in-out infinite',
+        flicker: 'flicker 10s linear infinite'
+      }
     },
   },
   plugins: [],
